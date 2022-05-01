@@ -11,6 +11,7 @@
   "author": "zhongHong",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-figure": "^0.2.0",
     "markdown-it-fontawesome": "^0.3.0",

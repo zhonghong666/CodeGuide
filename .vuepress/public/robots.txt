@@ -1,0 +1,2 @@
+Sitemap: https://zhonghong520.com/sitemap.xml
+User-agent: *

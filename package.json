@@ -20,6 +20,7 @@
     "markdown-it-smartarrows": "^1.0.1",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-seo": "^0.2.0"
   }
 }

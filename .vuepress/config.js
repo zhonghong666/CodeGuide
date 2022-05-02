@@ -21,7 +21,19 @@ module.exports = {
     dest: 'dist',
     plugins: [
         ['@vuepress/back-to-top', true],
-        
+        ["seo", {
+            siteTitle: (_, $site) => $site.title,
+            title: $page => $page.title,
+            description: $page => $page.frontmatter.description,
+            author: (_, $site) => $site.themeConfig.author,
+            tags: $page => $page.frontmatter.tags,
+            // twitterCard: _ => 'summary_large_image',
+            type: $page => 'article',
+            url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+            image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image),
+            publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+            modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+        }]
     ],
     // markdown配置
     markdown: {
@@ -46,7 +58,7 @@ module.exports = {
         logo: getOssSoure('logo.png'),
         docsRepo: "zhonghong666/CodeGuide",
         // 编辑文档的所在目录
-        docsDir: '/',
+        docsDir: '',
         lastUpdated: '最后更新',
         smoothScroll: true,
         docsBranch: 'master',

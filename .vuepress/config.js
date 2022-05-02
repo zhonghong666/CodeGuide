@@ -21,7 +21,6 @@ module.exports = {
     dest: 'dist',
     plugins: [
         ['@vuepress/back-to-top', true],
-        ['@vuepress/medium-zoom', true],
         
     ],
     // markdown配置

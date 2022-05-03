@@ -59,9 +59,9 @@ module.exports = {
         docsRepo: "zhonghong666/CodeGuide",
         // 编辑文档的所在目录
         docsDir: '',
-        lastUpdated: '最后更新',
+        lastUpdated: '上次更新',
         smoothScroll: true,
-        docsBranch: 'master',
+        docsBranch: 'main',
         editLinks: true,
         editLinkText: '在GitHub中编辑',
         // 导航栏配置

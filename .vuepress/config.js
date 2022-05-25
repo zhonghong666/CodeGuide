@@ -71,13 +71,18 @@ module.exports = {
             //     {text: 'Java基础', link: '/docs/other/guide-to-read'},
             //     {text: 'JVM', link: '/docs/other/guide-to-read'}
             // ]},
-            // {text: 'Spring', link: '/docs/other/guide-to-read'},
-            // {text: '设计模式', link: '/docs/other/guide-to-read'},
+            // {text: 'Spring', link: '/docs/designPatterns/index'},
+            {text: '设计模式', link: '/docs/designPatterns/preface'},
             // {text: 'Netty', link: '/docs/other/guide-to-read'},
+            {text: '资源', items: [
+                {text: 'emoji表情符号', link: '/docs/resources/emoji'}
+            ]}
         ],
         // 侧边栏配置
         sidebar: {
             "/docs/other/": getBarOther(),
+            "/docs/designPatterns/": getBarDesignPatterns(),
+            "/docs/resources/emoji": getBarResource()
         }
     }
 }
@@ -91,10 +96,36 @@ function getBarOther() {
         {
             title: "阅读指南",
             collapsable: false,
-            sidebarDepth: 2,
+            sidebarDepth: 4,
             children: [
                 "guide-to-read.md"
             ]
         }
     ]
+}
+
+function getBarResource() {
+    return [
+        {
+            title: "emoji表情符号大全",
+            collapsable: false,
+            sidebarDepth: 4,
+            children: [
+                "emoji.md"
+            ]
+        }
+    ];
+}
+
+function getBarDesignPatterns() {
+    return [
+        {
+            title: "概述",
+            collapsable: false,
+            sidebarDepth: 4,
+            children: [
+                "preface.md"
+            ]
+        }
+    ];
 }

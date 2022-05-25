@@ -37,7 +37,7 @@ module.exports = {
     ],
     // markdown配置
     markdown: {
-        anchor: {permalink: false},
+        anchor: {permalink: true},
         toc: {includeLevel: [2, 3]},
         extendMarkdown: md => {
             md.use(require('markdown-it-mermaid').default);
